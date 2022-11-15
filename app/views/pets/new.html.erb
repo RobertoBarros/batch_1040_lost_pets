@@ -1,0 +1,20 @@
+
+
+<div class="row justify-content-center">
+  <div class="col-4">
+
+    <h1 class='mb-5'>Add a new lost pet</h1>
+
+    <%= simple_form_for @pet do |f| %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :species, collection: Pet::SPECIES %>
+      <%= f.input :found_at %>
+      <div class="d-grid">
+        <%= f.button :submit, class: 'btn btn-primary mt-3' %>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
